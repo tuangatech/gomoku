@@ -11,6 +11,7 @@ training_log.csv
 
 # Temp/scratch
 temp/
+runs/
 
 # IDE
 .vscode/
