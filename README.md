@@ -80,6 +80,8 @@ python play_gui.py --mode full
 
 The GUI loads `checkpoints/champion.pth` automatically. No need to specify a checkpoint path.
 
+![Game Demo](docs/game.gif)
+
 ## Controls (play_gui.py)
 
 | Key | Action |
