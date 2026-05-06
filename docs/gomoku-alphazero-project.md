@@ -1,6 +1,6 @@
 # Building a Gomoku AI from Scratch with AlphaZero & Reinforcement Learning
 
-> **A weekend deep-dive:** Training a bot that starts knowing nothing and teaches itself to beat you — on a 10×10 board, five-in-a-row, using the same algorithm that mastered Go, chess, and shogi.
+> Training a bot that starts knowing nothing and teaches itself to beat me — on a 10×10 board, five-in-a-row, using the same algorithm that mastered Go, chess, and shogi. Result: trained 6x6 board, 4-win took me 15 hours on a RTX-4070 and I stoped there :) 
 
 ---
 
@@ -42,9 +42,9 @@ The standard competitive Gomoku board is 15×15. A 10×10 board is a sweet spot 
 
 | Board | Cells | State Space (est.) | Training Time (single GPU) |
 |-------|-------|-------------------|---------------------------|
-| 5×5   | 25    | ~10^7              | ~15 minutes (smoke test)  |
-| 6×6   | 36    | ~10^12             | Hours                     |
-| 10×10 | 100   | ~10^40             | 2–5 days                  |
+| 5×5   | 25    | ~10^7              | ~2 hours (smoke test)    |
+| 6×6   | 36    | ~10^12             | 15 hours                  |
+| 10×10 | 100   | ~10^40             | ~5 days                   |
 | 15×15 | 225   | ~10^105            | Weeks–months              |
 
 At 10×10, the game is complex enough that the bot must develop real strategic intuition — threats, double-fours, open threes — yet tractable enough to train from scratch in a weekend.

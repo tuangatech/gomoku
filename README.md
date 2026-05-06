@@ -18,15 +18,15 @@ python train.py --mode full --resume
 # 4. Run unit tests
 python test_game.py
 
-# 5. Quick smoke test — 5x5 / 3-in-a-row (~15 minutes)
+# 5. Quick smoke test — 5x5 / 3-in-a-row (~2 hours)
 python train.py --mode quick
 python play_gui.py --mode quick
 
-# 6. Validation — 6x6 / 4-in-a-row (~2 hours)
+# 6. Validation — 6x6 / 4-in-a-row (~12 hours)
 python train.py --mode validate
 python play_gui.py --mode validate
 
-# 7. Full training — 10x10 / 5-in-a-row (~3-5 days)
+# 7. Full training — 10x10 / 5-in-a-row (~5 days)
 python train.py --mode full
 python play_gui.py --mode full
 
