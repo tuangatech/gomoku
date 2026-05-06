@@ -1,7 +1,8 @@
 # Gomoku AlphaZero — From Scratch
 
-AlphaZero-style Gomoku bot built from scratch in Python + PyTorch.
-Self-play reinforcement learning, MCTS + ResNet, Pygame UI.
+- AlphaZero-style Gomoku bot built from scratch in Python + PyTorch.
+- Self-play reinforcement learning, MCTS + ResNet, Pygame UI.
+- Trained on an RTX-4070
 
 ## Quick Start
 
@@ -12,23 +13,23 @@ pip install -r requirements.txt
 # 2. Verify GPU
 python -c "import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0))"
 
-# 3. Resume training (warm-start from saved champion weights)
-python train.py --mode full --resume
-
-# 4. Run unit tests
+# 3. Run unit tests
 python test_game.py
 
-# 5. Quick smoke test — 5x5 / 3-in-a-row (~2 hours)
+# 4. Quick smoke test — 5x5 / 3-in-a-row (~2 hours)
 python train.py --mode quick
 python play_gui.py --mode quick
 
-# 6. Validation — 6x6 / 4-in-a-row (~12 hours)
+# 5. Validation — 6x6 / 4-in-a-row (~15 hours)
 python train.py --mode validate
 python play_gui.py --mode validate
 
-# 7. Full training — 10x10 / 5-in-a-row (~5 days)
+# 6. Full training — 10x10 / 5-in-a-row (~5 days)
 python train.py --mode full
 python play_gui.py --mode full
+
+# 7. Resume training (warm-start from saved champion weights)
+python train.py --mode full --resume
 
 # 8. Monitor training with TensorBoard
 tensorboard --logdir runs
@@ -56,9 +57,9 @@ tensorboard --logdir runs
 
 | Mode | Board | Win | Time | Purpose |
 |------|-------|-----|------|---------|
-| `quick` | 5×5 | 3-in-a-row | ~15 min | Smoke test — verify the pipeline works |
-| `validate` | 6×6 | 4-in-a-row | ~2 hrs | Validate learning — bot should beat heuristic >70% by iter 10 |
-| `full` | 10×10 | 5-in-a-row | ~3-5 days | Full training — bot develops real strategic play |
+| `quick` | 5×5 | 3-in-a-row | ~2 hours | Smoke test — verify the pipeline works |
+| `validate` | 6×6 | 4-in-a-row | ~15 hrs | Validate learning — bot should beat heuristic >70% by iter 10 |
+| `full` | 10×10 | 5-in-a-row | ~5 days | Full training — bot develops real strategic play |
 
 Start with `quick` to verify everything runs, then `validate`, then `full`.
 
